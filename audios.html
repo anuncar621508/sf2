@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de Sonido en HTML</title>
+</head>
+<body>
+<h1>Sonido en HTML</h1>
+<p>Reproduce un sonido en tu página web.</p>
+
+<audio id="miAudio" loop>
+    <source src="./01.%20Title%20Theme%20%5BCPS-1%5D.mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+</audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('miAudio');
+        audio.play();
+    });
+</script>
+</body>
+</html>

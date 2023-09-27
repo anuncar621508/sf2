@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&family=VT323&display=swap');
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-container1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.flex-container2 {
+  display: grid;
+  grid-template-columns: 40% 10% 10% 40%;
+  justify-content: space-evenly;
+  margin-bottom: 200px;
+  align-items: end;
+
+}
+
+.flex-container2 :nth-child(4) {
+margin-left: 80px;
+}
+
+.mieleccion .maquinaeleccion {
+  width: 10px;
+}
+
+body {
+  background-color: #000072;
+  margin: 0px;
+}
+
+.mapa {
+  display: flex;
+  justify-content: center;
+}
+
+.titulo h1 {
+  font-family: 'VT323', monospace;
+  font-size: 50px;
+}
+
+
+.mapa img {
+  width: 500px;
+}
+
+.per {
+  width: 500px;
+}
+
+.resultado {
+  font-size: 150px;
+  font-family: 'VT323', monospace;
+  justify-content: center;
+  display: flex;
+  color: white;
+}
+
+.comienzo {
+    color: yellow;
+    font-family: fantasy;
+    text-decoration: none;
+    font-size: 40px;
+  }
+

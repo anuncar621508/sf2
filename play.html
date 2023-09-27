@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!--Script para reproduccion automatica-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('miAudio');
+        audio.play();
+      });
+    </script>
+    <!--Script para modificar imagen-->
+    <script>
+      function cambiarImagen(opcion) {
+        var imagen = document.getElementById('eleccion');
+          imagen.src = './img/' + opcion + '.png';
+
+        //Opciones a elegir de la maquina
+        var opciones = ["mano", "roca", "tijeras"];
+        //Imagen que va a cambiar
+        var imagen2 = document.getElementById('maquina');
+
+        //Eleccion de la maquina
+        var aleatorio = Math.floor(Math.random() * 3);
+        imagen2.src = './img/' + opciones[aleatorio] + '.png';
+
+        if (opcion==opciones[aleatorio]){
+          //var empate='Has EMPATADO';
+         // console.log(empate);
+         var resultado = document.getElementById('resultado');
+          resultado.innerHTML += 'Has EMPATADO';
+        }else if ((opcion=="piedra" && opciones[aleatorio]=="papel") ||  (opcion=="papel" && opciones[aleatorio]=="tijeras") || (opcion=="tijeras" && opciones[aleatorio]=="priedra")){
+          //var empate='Has PERDIDO';
+          //console.log(empate);
+          resultado.innerHTML += 'Has PERDIDO';
+        }else{
+          //var empate='Has GANADO';
+          //console.log(empate);
+          resultado.innerHTML += 'Has GANADO';
+        }
+      }
+    </script>
+
+
+  </head>
+
+  <body>
+    <audio id="miAudio" loop>
+        <source src="./sound/intro.mp3" type="audio/mp3">
+    </audio>
+    <div class="flex-container">
+      <div class="titulo">
+        <h1 class="comienzo">PLAYER SELECT</h1>
+      </div>
+    </div>
+
+    <div class="mapa"><img src="./img/mapa.png"></div>
+
+    <div class="resultado" id="resultado"></div>
+
+    <div class="flex-container1">
+      <div><img src="/img/mano.png"  width="120px" onclick="cambiarImagen('mano')"/></div>
+      <div><img class="imagen-base" src="/img/roca.png" width="150px" onclick="cambiarImagen('roca')"/></div>
+      <div><img src="/img/tijeras.png" width="110px" onclick="cambiarImagen('tijeras')"/></div>
+    </div>
+
+    <div class="flex-container2">
+      <div><img class="per" src="./img/ryu.png"></div>
+      <div><img class="mieleccion" src="./img/mano.png" width="100px" id="eleccion"/></div>
+      <div><img class="maquinaeleccion" src="/img/tijeras.png" width="100px" id="maquina"/></div>
+      <div><img class="per" src="./img/dalhsin.png"></div>
+    </div>
+  </body>
+</html>
