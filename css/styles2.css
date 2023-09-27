@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Mooli&family=VT323&display=swap');
+
 .flex-container {
   display: flex;
   justify-content: space-around;
@@ -9,13 +11,18 @@
   justify-content: space-around;
 }
 
+.flex-container2 div a {
+  font-family: 'VT323', monospace;
+  font-size: 80px;
+}
+
 body {
   background-color: black;
+
 }
 
 .titulo {
   color: white;
-  flex: center;
   margin-bottom: 100px;
 }
 

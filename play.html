@@ -35,15 +35,17 @@
           //var empate='Has EMPATADO';
          // console.log(empate);
          var resultado = document.getElementById('resultado');
-          resultado.innerHTML += 'Has EMPATADO';
-        }else if ((opcion=="piedra" && opciones[aleatorio]=="papel") ||  (opcion=="papel" && opciones[aleatorio]=="tijeras") || (opcion=="tijeras" && opciones[aleatorio]=="priedra")){
+          resultado.innerHTML = 'HAS EMPATADO';
+        }else if ((opcion=="roca" && opciones[aleatorio]=="mano") ||  (opcion=="mano" && opciones[aleatorio]=="tijeras") || (opcion=="tijeras" && opciones[aleatorio]=="roca")){
           //var empate='Has PERDIDO';
           //console.log(empate);
-          resultado.innerHTML += 'Has PERDIDO';
+          var resultado = document.getElementById('resultado');
+          resultado.innerHTML = 'HAS PERDIDO';
         }else{
           //var empate='Has GANADO';
           //console.log(empate);
-          resultado.innerHTML += 'Has GANADO';
+          var resultado = document.getElementById('resultado');
+          resultado.innerHTML = 'HAS GANADO';
         }
       }
     </script>
